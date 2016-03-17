@@ -1,0 +1,63 @@
+<div class="container">
+  <div class="panel panel-default">
+    <div class="panel-body">
+      <div class="media">
+        <div class="pull-left">
+          <img class="media-object img-rounded" ng-src="{{show.poster}}">
+          <div class="text-center" ng-if="currentUser">
+            <div ng-show="!isSubscribed()">
+              <button ng-click="subscribe()" class="btn btn-block btn-success">
+                <span class="ion-plus"></span> Subscribe
+              </button>
+            </div>
+            <div ng-show="isSubscribed()">
+              <button ng-click="unsubscribe()" class="btn btn-block btn-danger">
+                <span class="ion-minus"></span> Unsubscribe
+              </button>
+            </div>
+          </div>
+          <div class="text-center" ng-show="!currentUser">
+            <a class="btn btn-block btn-primary" href="#/login">Login to Subscribe</a>
+          </div>
+        </div>
+        <div class="media-body">
+          <h2 class="media-heading">
+            {{show.name}}
+            <span class="pull-right text-danger"><span class="ion-heart"></span> {{show.rating}}</span>
+          </h2>
+          <h4 ng-show="show.status === 'Continuing'">
+            <span class="ion-calendar"></span>
+            {{show.airsDayOfWeek}} <em>{{show.airsTime}}</em> on
+            {{show.network}}
+          </h4>
+          <h4 ng-show="show.status === 'Ended'">
+            Status: <span class="text-danger">Ended</span>
+          </h4>
+          <p>{{show.overview}}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="alert alert-info" ng-show="nextEpisode">
+    The next episode starts {{nextEpisode.firstAired | fromNow}}.
+  </div>
+
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <span class="ion-film-marker"></span> Episodes
+    </div>
+    <div class="panel-body">
+      <div class="episode" ng-repeat="episode in show.episodes">
+        <h4>{{episode.episodeName}}
+        <small>Season {{episode.season}}, Episode {{episode.episodeNumber}}</small>
+        </h4>
+        <p>
+          <span class="ion-clock"></span>
+          {{episode.firstAired | date: 'short'}}
+        </p>
+        <p>{{episode.overview}}</p>
+      </div>
+    </div>
+  </div>
+</div>

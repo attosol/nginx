@@ -1,0 +1,38 @@
+{
+  "name": "showtrackr",
+  "version": "0.0.0",
+  "scripts": {
+    "test": "karma start public/test/karma.conf.js"
+  },
+  "dependencies": {
+    "agenda": "^0.6.28",
+    "async": "^1.4.2",
+    "bcryptjs": "^2.2.1",
+    "body-parser": "^1.13.3",
+    "express": "^4.13.3",
+    "jwt-simple": "^0.3.1",
+    "lodash": "^3.10.1",
+    "method-override": "^2.3.5",
+    "moment": "^2.10.6",
+    "mongoose": "^4.1.7",
+    "morgan": "^1.6.1",
+    "nodemailer": "^1.4.0",
+    "request": "^2.62.0",
+    "sugar": "^1.4.1",
+    "xml2js": "^0.4.12"
+  },
+  "devDependencies": {
+    "gulp": "^3.9.0",
+    "gulp-angular-templatecache": "^1.7.0",
+    "gulp-concat": "^2.6.0",
+    "gulp-csso": "^1.0.0",
+    "gulp-ng-annotate": "^1.1.0",
+    "gulp-plumber": "^1.0.1",
+    "gulp-sass": "^2.0.4",
+    "gulp-uglify": "^1.4.1",
+    "karma": "^0.13.9",
+    "karma-chrome-launcher": "^0.2.0",
+    "karma-jasmine": "^0.3.6",
+    "karma-phantomjs-launcher": "^0.2.1"
+  }
+}

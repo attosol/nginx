@@ -7,4 +7,6 @@ Sincere thanks to all the website creators, designers and everyone involved.
 
 - http://www.free-css.com/free-css-templates/page194/shield#shout
 - http://www.free-css.com/free-css-templates/page194/landy-v1.0#shout
+- WordPress - http://www.wordpress.org
+- Ghost - http://ghost.org
 
